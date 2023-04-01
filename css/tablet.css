@@ -1,0 +1,152 @@
+/* Tablets*/
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  #container {
+    width: 720px;
+    margin: 0 auto;
+  }
+
+  /* banner */
+  .web-banner {
+    height: 350px;
+  }
+
+  /* navbar */
+  #nav-bar .container img {
+    display: none;
+  }
+
+  #nav-bar .container div {
+    width: 50px;
+    border-left: 1px solid #b7b7b7;
+  }
+
+  /* muc tieu nghe nghiep va thong tin ca nhan */
+
+  #about .col {
+    padding: 50px 25px 20px 30px;
+  }
+
+  #job-info .row {
+    align-items: start;
+  }
+
+  /* THONG TIN NGHE NGHIEP (kinh nghiem, hoc van, hoat dong, so thich, ngon ngu, ky nang) */
+
+  #job-info .grid-container {
+    display: grid;
+    column-gap: 20px;
+    justify-content: center;
+    grid-template-areas:
+      "exp act"
+      "exp act"
+      "exp edu"
+      "skill edu"
+      "skill edu"
+      "language hobby";
+  }
+
+  #job-info .small-grid-container {
+    width: 350px;
+    height: fit-content;
+  }
+
+  /* chung chi */
+
+  .item-cert1,
+  .item-cert2,
+  .item-cert3 {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 30%;
+    padding: 0;
+  }
+
+  .item-cert1,
+  .item-cert2 {
+    margin-bottom: -20px;
+  }
+
+  #certificate img {
+    height: 100%;
+    width: auto;
+    padding: 0;
+    margin-left: 35px;
+  }
+
+  .item-cert2 {
+    margin-left: 30px;
+    margin-right: -30px;
+  }
+
+  .item-cert3 {
+    padding-top: 30px;
+    margin-bottom: -20px;
+  }
+
+  .cert1,
+  .cert2,
+  .cert3 {
+    margin-left: 35px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+  }
+
+  #certificate .name {
+    padding: 8px 0 10px 0;
+  }
+
+  /* tao border chung chi*/
+
+  .item-cert1,
+  .item-cert3 {
+    position: relative;
+  }
+  .item-cert3::before {
+    content: "";
+    background-color: #d6c08d;
+    position: absolute;
+    left: 10%;
+    top: -5px;
+    width: 187%;
+    height: 1px;
+  }
+
+  .item-cert1::after {
+    content: "";
+    background-color: #d6c08d;
+    position: absolute;
+    top: 0px;
+    bottom: 55px;
+    right: 0px;
+    width: 1px;
+  }
+
+  /* du an */
+  table {
+    min-height: 420px;
+  }
+
+  .project-about {
+    text-align: left;
+  }
+
+  table .icon-user-1 {
+    margin-left: 20px;
+  }
+
+  table .icon-lamp {
+    padding-left: 60px;
+  }
+
+  /* footer */
+  #footer .container {
+    height: 80px;
+    gap: 20px;
+  }
+
+  /* vi tri viewmore, viewless button (for java)  */
+  .viewmore,
+  .viewless {
+    left: 70px;
+  }
+}

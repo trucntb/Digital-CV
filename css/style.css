@@ -1,0 +1,554 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.bg-grey {
+  background: #f7f7f7;
+}
+
+h1 {
+  font-size: 22px;
+}
+
+/* BANNER */
+
+.web-banner {
+  background-image: url("../images/banner.jpg");
+  width: 100%;
+  height: 500px;
+  position: relative;
+  background-position: top center;
+  filter: brightness(50%);
+  margin-bottom: 0;
+}
+
+#banner {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  color: white;
+  text-align: center;
+  font-weight: normal;
+  transform: translate(-50%, -50%);
+}
+
+#banner h1 {
+  font-size: 40px;
+  font-weight: normal;
+  padding-bottom: 12px;
+}
+
+/* NAVBAR */
+
+/* flex container  */
+#nav-bar .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* flex items */
+#nav-bar .container a {
+  color: black;
+  text-align: center;
+  padding: 25px 30px;
+  border-left: 1px solid #b7b7b7;
+  text-decoration: none;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+#nav-bar .container a:last-child {
+  border-right: 1px solid #b7b7b7;
+}
+
+#nav-bar .container div {
+  width: 250px;
+}
+
+#nav-bar i {
+  color: dodgerblue;
+}
+
+/* MUC TIEU NGHE NGHIEP VA THONG TIN CA NHAN */
+
+/* grid item MUC TIEU NGHE NGHIEP */
+
+#target {
+  background-color: #efefef;
+  padding: 60px 50px 0 60px;
+}
+
+#about h1 {
+  padding-bottom: 30px;
+}
+
+/* grid item THONG TIN CA NHAN  */
+
+#personal-info {
+  background-color: #e6e6e6;
+  padding: 60px 0 40px 60px;
+}
+
+/* Loại bỏ dấu chấm tròn trước list */
+#personal-info .info {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.info-icon {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.info-icon a:visited {
+  color: dodgerblue;
+}
+
+/* Ẩn thông tin cá nhân */
+
+#inputEmail {
+  margin-bottom: 5px;
+}
+
+#submit {
+  margin-top: 20px;
+}
+
+#hidden-info {
+  background-color: #e6e6e6;
+  padding: 60px 60px;
+}
+
+/* THONG TIN NGHE NGHIEP - GRID 3 COLUMNS 2 ROWS (kinh nghiem, hoc van, hoat dong, so thich, ngon ngu, ky nang) */
+
+#job-info .col1 {
+  grid-area: exp;
+}
+#job-info .col2 {
+  grid-area: edu;
+}
+#job-info .col3 {
+  grid-area: act;
+}
+#job-info .col4 {
+  grid-area: hobby;
+}
+#job-info .col5 {
+  grid-area: language;
+}
+#job-info .col6 {
+  grid-area: skill;
+}
+
+#job-info h1 {
+  padding-left: 60px;
+}
+#job-info h1 + i {
+  font-size: 35px;
+}
+
+/* dinh dang cac grid item kinh nghiem, hoc van, hoat dong */
+
+#job-info .name {
+  font-weight: bold;
+  font-size: 14px;
+  padding-bottom: 8px;
+}
+
+#job-info .time {
+  font-style: italic;
+  padding-bottom: 12px;
+}
+
+.exp {
+  margin-bottom: 23px;
+}
+.act {
+  margin-bottom: 9.9px;
+}
+
+/* tao dau cham tron trong kinh nghiem, hoc van, hoat dong */
+.exp1,
+.exp2,
+.edu1,
+.edu2,
+.edu3,
+.act1,
+.act2 {
+  position: relative;
+  padding-left: 50px;
+  padding-right: 20px;
+  padding-bottom: 12px;
+}
+.exp1::before,
+.exp2::before,
+.edu1::before,
+.edu2::before,
+.edu3::before,
+.act1::before,
+.act2::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  width: 12px;
+  height: 12px;
+  background-color: dodgerblue;
+  border-radius: 50%;
+  border: 1px solid rgb(235, 235, 235);
+}
+
+/* to mau xung quanh "hien tai" cua kinh nghiem 1  */
+.exp1 .now {
+  background-color: dodgerblue;
+  color: white;
+  border-radius: 45%;
+  border: 1.5px solid dodgerblue;
+  padding: 3px 10px;
+}
+
+/* SMALL GRID (inside 6 grid items above)  */
+
+/* small grid container */
+.small-grid-container {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 80px 1fr;
+  row-gap: 40px;
+  border: 1px solid #b7b7b7;
+}
+/* dinh dang chung small grid items */
+
+.small-grid-container h1 {
+  padding-top: 40px;
+  padding-left: 30px;
+}
+
+.small-grid-container i {
+  font-size: 40px;
+  padding-top: 30px;
+  padding-right: 30px;
+}
+
+/* nhap 2 o cua hang thu 2 thanh 1 o  */
+.exp,
+.edu,
+.act,
+.hobby,
+.language,
+.skill {
+  grid-column: 1/-1;
+}
+
+/* small grid item so thich  */
+
+.hobby {
+  display: grid;
+  grid-template-rows: 86px 86px;
+  margin-top: 28.2px;
+  align-items: center;
+}
+
+.hobby-icon,
+.hobby-name {
+  min-height: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.hobby-icon i {
+  font-size: 20px;
+  color: dodgerblue;
+  border: solid 1px dodgerblue;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  color: dodgerblue;
+  padding: 16px 0;
+  text-align: center;
+}
+
+.hobby-name {
+  text-align: center;
+}
+
+/* NGON NGU, KY NANG  */
+
+.language p,
+.skill p {
+  margin-left: 20px !important;
+}
+
+/* tao nhom span */
+.language span,
+.skill span {
+  background-color: #ddd;
+  display: inline-block;
+  height: 3px;
+  width: 60px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.span2,
+.span3 {
+  margin-left: 10px !important;
+}
+
+.lang1 {
+  margin-bottom: 10px;
+}
+
+/* to mau cac span ngon ngu  */
+.lang1 .span1,
+.lang1 .span2 {
+  background-color: dodgerblue;
+}
+
+.lang2 .span1,
+.lang2 .span2 {
+  background-color: dodgerblue;
+}
+
+.lang1 {
+  margin-top: 17px;
+}
+.lang2 {
+  margin-bottom: 45px;
+}
+
+/* to mau cac span ky nang  */
+.skill1 .span1 {
+  background-color: dodgerblue;
+}
+
+.skill2 .span1,
+.skill2 .span2 {
+  background-color: dodgerblue;
+}
+
+.skill3 .span1,
+.skill3 .span2 {
+  background-color: dodgerblue;
+}
+
+.skill4 .span1 {
+  background-color: dodgerblue;
+}
+
+.skill1,
+.skill2,
+.skill3 {
+  margin-bottom: 10px;
+}
+
+.skill1 {
+  margin-top: 17px;
+}
+
+.skill4 {
+  margin-bottom: 45px;
+}
+
+.skill p {
+  margin-left: 10px;
+}
+
+/* PHAN CHUNG CHI - GIAI THUONG */
+
+#certificate {
+  margin-top: 20px;
+}
+
+#certificate h1 {
+  padding-top: 40px;
+  margin-bottom: 30px;
+  margin-left: 50px;
+}
+
+/* dinh dang noi dung  */
+
+#certificate .name {
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+#certificate p {
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* PHAN DU AN  */
+
+#project {
+  margin-top: 20px;
+}
+
+#project h1 {
+  padding: 25px 0;
+  margin-left: 50px;
+}
+
+/* dinh dang trong cac grid items  */
+#project img {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+table {
+  border: 1px solid #b7b7b7;
+  border-collapse: collapse;
+  min-height: 300px;
+}
+
+table tr {
+  vertical-align: top;
+  border: 1px solid #b7b7b7;
+}
+
+table td {
+  padding: 10px 5px;
+}
+
+/* ten du an  */
+.project1 .name,
+.project2 .name,
+.project3 .name {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+  padding-left: 20px;
+}
+
+.project-about .time {
+  margin-left: 10px;
+}
+
+.project-about i {
+  margin-left: 15px;
+}
+
+/* tao duong vien cho thoi gian  */
+.project-about .time {
+  background-color: dodgerblue;
+  color: white;
+  border-radius: 45%;
+  border: 1.5px solid dodgerblue;
+  padding: 2px 5px 2px 5px;
+}
+
+/* lien ket link den trang Project Charter */
+
+#project a:link {
+  color: blue;
+}
+
+#project a:visited {
+  color: blue;
+}
+
+#project a:hover {
+  color: orange;
+}
+
+#project a:active {
+  color: orange;
+}
+
+/* PHAN FOOTER */
+
+#footer .container {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  height: 100px;
+  gap: 40px;
+  justify-content: center;
+  align-content: center;
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+.footer-1,
+.footer-2,
+.footer-3 {
+  display: flex;
+}
+
+#footer i {
+  font-size: 180%;
+  color: dodgerblue;
+}
+#footer a {
+  margin-top: 8%;
+  margin-left: 5px;
+}
+a:link {
+  color: #444;
+  text-decoration: none;
+}
+a:visited {
+  color: #444;
+}
+
+/* FOR JAVA */
+
+.hidden {
+  display: none;
+}
+
+/* dinh dang View more, View less button */
+.viewmore,
+.viewless {
+  text-transform: uppercase;
+  margin: 0;
+  background-color: rgb(225, 255, 0);
+  color: black;
+  border: none;
+  border-radius: 30%;
+  outline: none;
+  padding: 2px 8px;
+  cursor: pointer;
+  font-size: 11px;
+  width: auto;
+  position: absolute;
+  top: 70px;
+  left: 55px;
+}
+#job-info .small-grid-container {
+  position: relative;
+}
+
+/* show view more button */
+
+.viewmore {
+  display: none;
+}
+#exp-container:hover #exp-view-more {
+  display: block;
+}
+#edu-container:hover #edu-view-more {
+  display: block;
+}
+#act-container:hover #act-view-more {
+  display: block;
+}
+#hobby-container:hover #hobby-view-more {
+  display: block;
+}
+#language-container:hover #language-view-more {
+  display: block;
+}
+#skill-container:hover #skill-view-more {
+  display: block;
+}

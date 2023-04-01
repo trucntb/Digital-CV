@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/laptop.css" />
+    <link rel="stylesheet" href="./css/tablet.css" />
+    <link rel="stylesheet" href="./css/mobile.css" />
+    <link rel="stylesheet" href="./css/font.css" />
+    <title>Assignment 03</title>
+  </head>
+
+  <div id="container">
+    <body>
+      <!-- BANNER -->
+      <header>
+        <div class="web-banner"></div>
+        <div id="banner" style="padding: 50px">
+          <h1>Nguyễn Thị Bé Trúc</h1>
+          <span>Java Developer</span>
+        </div>
+      </header>
+      <!-- KET THUC BANNER -->
+
+      <!-- NAR BAR -->
+      <section id="nav-bar">
+        <nav class="container">
+          <a href="#"><i class="icon-user"></i>Thông tin</a>
+          <a href="#"><i class="icon-doc-text-inv"></i>Lý lịch</a>
+          <div>
+            <!-- <h1>Nguyễn Thị Bé Trúc</h1>
+            <span>Java Developer</span> -->
+            <img
+              class="img-fluid d-none d-lg-block"
+              src="images/truc.JPG"
+              alt="hinh ca nhan"
+              width="150px"
+              height="150px"
+            />
+          </div>
+          <a href="#"><i class="icon-mail-alt"></i>Chứng chỉ</a>
+          <a href="#"><i class="icon-star-1"></i>Dự Án</a>
+        </nav>
+      </section>
+      <!-- KET THUC NAR BAR -->
+
+      <!-- GRID THONG TIN CA NHAN (GRID 2 COLUMNS) -->
+      <section id="about" class="bg-grey">
+        <div class="container">
+          <div class="row">
+            <!-- COLUMN 1 -->
+            <div class="col col-12 col-md-6" id="target">
+              <h1 class="section-title">Mục tiêu nghề nghiệp</h1>
+              <p>
+                Là một sinh viên đã hoàn thành chương trình chứng chỉ Doanh
+                Nghiệp của FUNiX. Em mong muốn mình sẽ được làm việc với vị trí
+                <b>Java Developer</b>, có thể vận dụng những kiến thức đã được
+                trau dồi và không ngừng học hỏi để phát triển bản thân, cũng như
+                hoàn thành tốt nhất công việc được giao.
+              </p>
+            </div>
+
+            <!-- COLUMN 2 -->
+            <div class="col col-12 col-md-6 hidden" id="personal-info">
+              <h1 class="section-title">Thông tin cá nhân</h1>
+              <ul class="mt-40 info">
+                <li><span>Giới tính</span> : Nữ</li>
+                <li><span>Ngày sinh</span> : 15/03/1990</li>
+                <li><span>Điện thoại</span> : (+84) 849054059</li>
+                <li><span>Email</span> : trucntbfx20602@funix.edu.vn</li>
+                <li><span>Địa chỉ</span> : Tiền Giang, Việt Nam</li>
+                <li>
+                  <span>Website</span> :
+                  <a href="https://global.funix.edu.vn">global.funix.edu.vn</a>
+                </li>
+              </ul>
+
+              <div class="info-icon">
+                <a href="#"><i class="icon-twitter"></i></a>
+                <a href="#"><i class="icon-facebook"></i></a>
+                <a href="#"><i class="icon-gplus"></i></a>
+                <a href="#"><i class="icon-linkedin"></i></a>
+              </div>
+            </div>
+
+            <!-- div ẩn thông tin cá nhân -->
+            <div class="col col-12 col-md-6" id="hidden-info">
+              <h1 class="section-title">Thông tin cá nhân</h1>
+              <div class="form">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputEmail"
+                  placeholder="Enter email"
+                  required
+                />
+                <label for="inputEmail">Hãy nhập email để xác thực</label><br />
+                <input
+                  class="btn btn-primary"
+                  id="submit"
+                  type="submit"
+                  value="Submit"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- KET THUC GRID THONG TIN CA NHAN -->
+
+      <!-- THONG TIN NGHE NGHIEP -->
+      <section id="job-info">
+        <!-- GRID CONTAINER THONG TIN NGHE NGHIEP (3 COLUMNS 2 ROWS) -->
+        <div class="container">
+          <div class="grid-container">
+            <!-- GRID ITEM KINH NGHIEM  -->
+            <div
+              class="col1 small-grid-container"
+              id="exp-container"
+              style="margin-top: 20px"
+            >
+              <h1>Kinh nghiệm</h1>
+              <i class="ic-toolbox"></i>
+              <button class="btn viewmore" id="exp-view-more">
+                🔽 View more
+              </button>
+              <div class="exp hidden" id="exp-view-more-content">
+                <button class="btn viewless" id="exp-view-less">
+                  🔼 View less
+                </button>
+
+                <!-- KINH NGHIEM 1 -->
+                <div class="exp1">
+                  <p class="name">Full Stack Developer - Công ty Y</p>
+                  <p class="time">
+                    05/2022 - <span class="now"> Hiện tại</span>
+                  </p>
+                  <p class="content">
+                    - Xây dựng, phát triển Website dựa trên thiết kế và yêu cầu
+                    đã có.<br />
+                    - Phân tích và thiết kế Database, sử dụng các hệ quản trị
+                    CSDL (MySQL, SQLServer, NoSQL, ...) và viết được các câu
+                    truy vấn.<br />
+                    - Sử dụng ngôn ngữ server-side (Python, Java, ...) để xây
+                    dựng các Web Server.
+                  </p>
+                </div>
+
+                <!-- KINH NGHIEM 2 -->
+                <div class="exp2">
+                  <p class="name">Web Designer - Công ty X</p>
+                  <p class="time">06/2021 - 04/2022</p>
+                  <p class="content">
+                    - Xây dựng, phát triển Website dựa trên thiết kế và yêu cầu
+                    đã có.<br />
+                    - Thiết kế Website dự trên yêu cầu của khách hàng.<br />
+                    - Sử dụng các công cụ: Figma, Canva, PTS.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- KET THUC GRID ITEM KINH NGHIEM -->
+
+            <!-- GRID ITEM HOC VAN -->
+            <div
+              class="col2 small-grid-container"
+              id="edu-container"
+              style="margin-top: 20px"
+            >
+              <h1>Học vấn</h1>
+              <i class="ic-pencil"></i>
+              <button class="btn viewmore" id="edu-view-more">
+                🔽 View more
+              </button>
+              <div class="edu hidden" id="edu-view-more-content">
+                <button class="btn viewless" id="edu-view-less">
+                  🔼 View less
+                </button>
+                <!-- HOC VAN 1 -->
+                <div class="edu1">
+                  <p class="name">FUNiX</p>
+                  <p class="time">06/2021 - 05/2022</p>
+                  <p class="content">
+                    - Tốt nghiệp chứng chỉ doanh nghiệp nhánh Java.<br />
+                    - GPA: 9/10
+                  </p>
+                </div>
+
+                <!-- HOC VAN 2 -->
+                <div class="edu2">
+                  <p class="name">Cử nhân - ĐH Kinh tế Tp.HCM</p>
+                  <p class="time">08/2008 - 07/2012</p>
+                  <p class="content">
+                    - Chuyên ngành: Thương mại<br />
+                    - GPA: 7/10
+                  </p>
+                </div>
+
+                <!-- HOC VAN 3 -->
+                <div class="edu3">
+                  <p class="name">Trường Nhật ngữ EHLE - Nhật Bản</p>
+                  <p class="time">10/2015 - 04/2018</p>
+                  <p class="content">
+                    - Chuyên ngành: Thương mại<br />
+                    - GPA: 7/10
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- KET THUC GRID ITEM HOC VAN -->
+
+            <!-- GRID ITEM HOAT DONG -->
+            <div
+              class="col3 small-grid-container"
+              id="act-container"
+              style="margin-top: 20px"
+            >
+              <h1>Hoạt động</h1>
+              <i class="ic-toolbox"></i>
+              <button class="btn viewmore" id="act-view-more">
+                🔽 View more
+              </button>
+              <div class="act hidden" id="act-view-more-content">
+                <button class="btn viewless" id="act-view-less">
+                  🔼 View less
+                </button>
+
+                <!-- HOAT DONG 1 -->
+                <div class="act1">
+                  <p class="name">FPT Edu Hackathon 2019</p>
+                  <p class="time">03/2019 - 05/2019</p>
+                  <p class="content">
+                    Giải 3 bảng A<br />
+                    Đề tài: Trang web về phân loại rác thải.
+                  </p>
+                </div>
+
+                <!-- HOAT DONG 2 -->
+                <div class="act2">
+                  <p class="name">Câu lạc bộ Z</p>
+                  <p class="time">08/2016 - 8/2017</p>
+                  <p class="content">
+                    - Trưởng ban chuyên môn<br />
+                    - Hỗ trợ tổ chức tuần lễ văn hoá Việt Nam Nam - Nhật Bản
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- KET THUC GRID ITEM HOAT DONG -->
+
+            <!-- GRID ITEM SO THICH -->
+            <div
+              class="col4 small-grid-container"
+              id="hobby-container"
+              style="margin-top: 20px"
+            >
+              <h1>Sở thích</h1>
+              <i class="ic-telescope"></i>
+              <button class="btn viewmore" id="hobby-view-more">
+                🔽 View more
+              </button>
+              <div class="hobby hidden" id="hobby-view-more-content">
+                <button class="btn viewless" id="hobby-view-less">
+                  🔼 View less
+                </button>
+
+                <div class="hobby-icon">
+                  <i class="ic-megaphone"></i>
+                  <i class="ic-strategy"></i>
+                  <i class="ic-hotairballoon"></i>
+                  <i class="ic-basket"></i>
+                </div>
+                <div class="hobby-name">
+                  <span>Âm nhạc</span>
+                  <span>Chơi game</span>
+                  <span>Du lịch</span>
+                  <span>Nấu ăn</span>
+                </div>
+              </div>
+            </div>
+            <!-- KET THUC GRID ITEM SO THICH -->
+
+            <!--  GRID ITEM NGON NGU -->
+            <div
+              class="col5 small-grid-container"
+              id="language-container"
+              style="margin-top: 20px"
+            >
+              <h1>Ngôn ngữ</h1>
+              <i class="ic-mic"></i>
+              <button class="btn viewmore" id="language-view-more">
+                🔽 View more
+              </button>
+              <div class="language hidden" id="language-view-more-content">
+                <button class="btn viewless" id="language-view-less">
+                  🔼 View less
+                </button>
+
+                <!-- NGON NGU 1  -->
+                <div class="lang1">
+                  <p>Tiếng Anh - TOEIC 500</p>
+                  <div>
+                    <span class="span1"></span>
+                    <span class="span2"></span>
+                    <span class="span3"></span>
+                  </div>
+                </div>
+
+                <!-- NGON NGU 2  -->
+                <div class="lang2">
+                  <p>Tiếng Nhật - JLPT N2</p>
+                  <div>
+                    <span class="span1"></span>
+                    <span class="span2"></span>
+                    <span class="span3"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- KET THUC GRID ITEM NGON NGU -->
+
+            <!--  GRID ITEM KY NANG -->
+            <div
+              class="col6 small-grid-container"
+              id="skill-container"
+              style="margin-top: 20px"
+            >
+              <h1>Kỹ năng</h1>
+              <i class="ic-tools-2"></i>
+              <button class="btn viewmore" id="skill-view-more">
+                🔽 View more
+              </button>
+              <div class="skill hidden" id="skill-view-more-content">
+                <button class="btn viewless" id="skill-view-less">
+                  🔼 View less
+                </button>
+
+                <!-- KY NANG 1  -->
+                <div class="skill1">
+                  <p>HTML/CSS: Fundamental</p>
+                  <div>
+                    <span class="span1"></span>
+                    <span class="span2"></span>
+                    <span class="span3"></span>
+                  </div>
+                </div>
+
+                <!-- KY NANG 2  -->
+                <div class="skill2">
+                  <p>Javascript: Intermediate</p>
+                  <div>
+                    <span class="span1"></span>
+                    <span class="span2"></span>
+                    <span class="span3"></span>
+                  </div>
+                </div>
+
+                <!-- KY NANG 3  -->
+                <div class="skill3">
+                  <p>NodeJS: Intermediate</p>
+                  <div>
+                    <span class="span1"></span>
+                    <span class="span2"></span>
+                    <span class="span3"></span>
+                  </div>
+                </div>
+
+                <!-- KY NANG 4  -->
+                <div class="skill4">
+                  <p>Bootstrap 5: Fundamental</p>
+                  <div>
+                    <span class="span1"></span>
+                    <span class="span2"></span>
+                    <span class="span3"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- KET THUC GRID ITEM KY NANG -->
+          </div>
+          <!-- KET THUC GID CONTAINER THONG TIN NGHE NGHIEP -->
+        </div>
+      </section>
+      <!-- KET THUC THONG TIN NGHE NGHIEP-->
+
+      <!-- CHUNG CHI - GIAI THUONG -->
+      <section id="certificate" class="bg-grey">
+        <div class="container">
+          <h1 class="section-title">Chứng chỉ - Giải thưởng</h1>
+        </div>
+
+        <!-- GRID CONTAINER CHUNG CHI (grid 2 columns 2 rows)  -->
+        <div class="container">
+          <div class="row">
+            <!-- CHUNG CHI 1  -->
+            <div class="col col-12 col-md-6 item-cert1">
+              <img
+                class="img-fluid"
+                src="images/Cert_WEB.png"
+                alt="chungchi1"
+              />
+              <div class="cert1">
+                <p class="name">CHỨNG CHỈ LẬP TRÌNH WEB - FUNIX</p>
+                <p class="content">
+                  - Chứng chỉ thuộc chương trình CCDN<br />
+                  - GPA: 8.6
+                </p>
+              </div>
+            </div>
+
+            <!-- CHUNG CHI 2  -->
+            <div class="col col-12 col-md-6 item-cert2">
+              <img
+                class="img-fluid"
+                src="images/Cert_PRF.png"
+                alt="chungchi2"
+              />
+              <div class="cert2">
+                <p class="name">CHỨNG CHỈ LẬP TRÌNH JAVASCRIPT - FUNIX</p>
+                <p class="content">
+                  - Chứng chỉ thuộc chương trình CCDN<br />
+                  - GPA: 8.9
+                </p>
+              </div>
+            </div>
+
+            <!-- CHUNG CHI 3  -->
+            <div class="col col-12 col-md-6 item-cert3">
+              <img
+                class="img-fluid"
+                src="images/Cert_DBI.png"
+                alt="chungchi3"
+              />
+              <div class="cert3">
+                <p class="name">CHỨNG CHỈ THIẾT KẾ DATABASE - FUNIX</p>
+                <p class="content">
+                  - Chứng chỉ thuộc chương trình CCDN<br />
+                  - GPA: 8.0
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- KET THUC GRID CHUNG CHI  -->
+      </section>
+      <!-- KET THUC CHUNG CHI - GIAI THUONG -->
+
+      <!-- DU AN -->
+      <section id="project">
+        <div class="container">
+          <h1 class="section-title">Dự án</h1>
+        </div>
+        <!-- GRID CONTAINER DU AN  -->
+        <div class="container">
+          <div class="row">
+            <!-- DU AN 1  -->
+            <div class="col col-12 col-md-4 project1">
+              <img
+                class="img-fluid"
+                src="images/project_1.png"
+                alt="hinh anh du an 1"
+              />
+
+              <table>
+                <tr>
+                  <td class="name" colspan="2">
+                    <a href=" https://trucntb.github.io/Project-Charter/"
+                      >CV cá nhân</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="project-about" colspan="2">
+                    <span class="time">2021</span>
+                    <i class="icon-user-1"></i>
+                    <span class="user">FUNIX</span>
+                    <i class="icon-lamp"></i>
+                    <span class="lamp">Developer</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Mô tả</td>
+                  <td>
+                    Trang web CV cá nhân online. Gồm các thông tin cá nhân cũng
+                    như kỹ năng nghề nghiệp.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Nhiệm vụ</td>
+                  <td>
+                    -Phát triển code - Review code - Tối ưu code - Xử lý lỗi
+                  </td>
+                </tr>
+                <tr>
+                  <td>Công nghệ</td>
+                  <td>- HTML, CSS</td>
+                </tr>
+              </table>
+            </div>
+
+            <!-- DU AN 2  -->
+            <div class="col col-12 col-md-4 project2">
+              <img
+                class="img-fluid"
+                src="images/project_2.png"
+                alt="hinh anh du an 2"
+              />
+              <table>
+                <tr>
+                  <td class="name" colspan="2">
+                    <a href=" https://trucntb.github.io/Project-Charter/"
+                      >Trang web quản lý thú cưng</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="project-about" colspan="2">
+                    <span class="time">2021</span>
+                    <i class="icon-user-1"></i>
+                    <span class="user">FUNIX</span>
+                    <i class="icon-lamp"></i>
+                    <span class="lamp">Developer</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Mô tả</td>
+                  <td>
+                    Ứng dụng giúp quản lý các thông tin của thú cưng như: Cân
+                    nặng, giống, tình trạng tiêm chủng, ... Bao gồm các chức
+                    năng thêm / sửa / xoá.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Nhiệm vụ</td>
+                  <td>
+                    -Phát triển code - Review code - Tối ưu code - Xử lý lỗi
+                  </td>
+                </tr>
+                <tr>
+                  <td>Công nghệ</td>
+                  <td>- HTML, CSS, Javascript</td>
+                </tr>
+              </table>
+            </div>
+
+            <!-- DU AN 3  -->
+            <div class="col col-12 col-md-4 project3">
+              <img
+                class="img-fluid"
+                src="images/project_3.png"
+                alt="hinh anh du an 3"
+              />
+              <table>
+                <tr>
+                  <td class="name" colspan="2">
+                    <a href=" https://trucntb.github.io/Project-Charter/"
+                      >Trang web xem tin tức</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="project-about" colspan="2">
+                    <span class="time">2021</span>
+                    <i class="icon-user-1"></i>
+                    <span class="user">FUNIX</span>
+                    <i class="icon-lamp"></i>
+                    <span class="lamp">Developer</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Mô tả</td>
+                  <td>
+                    Trang web xem tin tức từ nhiều nguồn khác nhau, người dùng
+                    có thể tìm kiếm các tin tức dựa theo các từ khoá.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Nhiệm vụ</td>
+                  <td>
+                    -Phát triển code - Review code - Tối ưu code - Xử lý lỗi
+                  </td>
+                </tr>
+                <tr>
+                  <td>Công nghệ</td>
+                  <td>- HTML, CSS, Javascript</td>
+                </tr>
+              </table>
+            </div>
+            <!-- KET THUC DU AN 3  -->
+          </div>
+        </div>
+        <!-- KET THUC GRID CONTAINER DU AN  -->
+      </section>
+      <!-- KET THUC DU AN -->
+
+      <!-- PHAN FOOTER -->
+      <section id="footer" class="bg-grey">
+        <div class="container">
+          <div class="footer-1">
+            <i class="icon-facebook-circled"></i>
+            <a href="https://www.facebook.com/profile.php?id=100089313166509"
+              >Facebook</a
+            >
+          </div>
+          <div class="footer-2">
+            <i class="icon-linkedin-circled"></i>
+            <a href="#">Linkedin</a>
+          </div>
+          <div class="footer-3">
+            <i class="icon-github-circled"></i>
+            <a href="#">Github</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- KET THUC FOOTER -->
+
+      <!-- Bundle -->
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"
+      ></script>
+      <script src="script.js"></script>
+    </body>
+  </div>
+</html>

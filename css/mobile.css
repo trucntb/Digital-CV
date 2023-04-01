@@ -1,0 +1,177 @@
+/* Mobile */
+@media screen and (max-width: 767.98px) {
+  #container {
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  /* banner */
+
+  .web-banner {
+    height: 350px;
+  }
+
+  /* navbar */
+
+  #nav-bar .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  #nav-bar .container a {
+    border: none;
+    padding: 10px 100px;
+    font-size: 12px;
+  }
+
+  #nav-bar .container a:first-child {
+    padding-top: 30px;
+  }
+
+  #nav-bar .container a:last-child {
+    border-right: none;
+    padding-bottom: 30px;
+  }
+
+  /* muc tieu nghe nghiep va thong tin ca nhan */
+
+  #about .row {
+    justify-content: center;
+  }
+  #about .col {
+    width: 350px;
+    align-items: center;
+    padding: 50px 40px;
+  }
+
+  /* thong tin nghe nghiep (kinh nghiem, hoc van, hoat dong, so thich, ngon ngu, ky nang) */
+
+  #job-info .grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #job-info .small-grid-container {
+    width: 350px;
+    height: fit-content;
+  }
+
+  /* chung chi */
+
+  #certificate h1 {
+    margin-left: 70px;
+  }
+
+  .item-cert1,
+  .item-cert2,
+  .item-cert3 {
+    justify-self: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  #certificate img {
+    max-width: 70%;
+    height: auto;
+    margin-left: 75px;
+  }
+
+  .cert1,
+  .cert2,
+  .cert3 {
+    justify-self: start;
+    margin: 0 0 60px 75px;
+  }
+
+  /* tao border chung chi */
+
+  .item-cert2,
+  .item-cert3 {
+    position: relative;
+  }
+
+  .item-cert2::after,
+  .item-cert3::after,
+  .item-cert2::before {
+    display: block;
+  }
+
+  .item-cert2::after,
+  .item-cert3::after {
+    content: "";
+    background-color: #d6c08d;
+    position: absolute;
+    left: 75px;
+    bottom: 10%;
+    width: 70%;
+    height: 1px;
+  }
+  .item-cert2::before {
+    content: "";
+    background-color: #d6c08d;
+    position: absolute;
+    left: 75px;
+    top: -10%;
+    width: 70%;
+    height: 1px;
+  }
+
+  /* du an */
+
+  #project h1 {
+    margin-left: 60px;
+  }
+
+  #project .row {
+    gap: 20px;
+    justify-content: center;
+  }
+
+  #project .col {
+    width: 350px;
+  }
+
+  table {
+    width: 100%;
+    min-height: fit-content;
+  }
+
+  .project-about .time {
+    margin: 0 180px 0 60px;
+  }
+
+  .project-about .icon-user-1,
+  .project-about .icon-lamp {
+    margin: 0 20px 0 60px;
+  }
+
+  .project-about .user,
+  .project-about .lamp {
+    margin-right: 110px;
+  }
+
+  /* footer */
+
+  #footer .container {
+    height: 70px;
+    gap: 0;
+  }
+
+  #footer a {
+    margin-top: 5%;
+  }
+
+  #footer i {
+    font-size: 150%;
+  }
+
+  /* for java */
+
+  .viewmore,
+  .viewless {
+    left: 70px;
+  }
+}
