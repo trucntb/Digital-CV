@@ -14,12 +14,18 @@ document.getElementById("submit").addEventListener("click", function () {
   const testEmail = regex.test(email);
   if (testEmail) {
     showInfo();
-  } else if (email === "") {
-    alert("Vui lòng nhập email để xác thực");
-  } else if (!testEmail) {
-    alert("Vui lòng nhập email đúng định dạng");
-    // document.write("Vui lòng nhập email đúng định dạng");
+  } else {
+    document.querySelector(".error").innerHTML =
+      "🚨 Vui lòng nhập email đúng định dạng để xác thực";
+    document.querySelector(".error").style.color = "red";
+    document.querySelector(".error").style.fontSize = "14px";
   }
+
+  // } else if (email === "") {
+  //   alert("Vui lòng nhập email để xác thực");
+  // } else if (!testEmail) {
+  //   alert("Vui lòng nhập email đúng định dạng");
+  // }
 });
 
 // VIEW MORE, VIEW LESS BUTTON
@@ -36,6 +42,7 @@ for (let i = 0; i < infoList.length; i++) {
         .classList.remove("hidden");
       document.getElementById(`${infoName}-view-more`).classList.add("hidden");
     });
+
   document
     .getElementById(`${infoName}-view-less`)
     .addEventListener("click", function () {
