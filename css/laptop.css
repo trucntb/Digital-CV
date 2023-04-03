@@ -21,17 +21,14 @@
 
   /* THONG TIN NGHE NGHIEP */
 
-  #job-info .grid-container {
+   #job-info .grid-container {
     justify-content: center;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     column-gap: 20px;
     grid-template-areas:
       "exp edu act"
-      "exp edu skill"
       "hobby language skill";
   }
-
   #job-info .small-grid-container {
     width: 305px;
     height: fit-content;
@@ -44,7 +41,11 @@
     margin-bottom: 14.5px;
   }
   .act {
-    margin-bottom: 50px;
+    margin-bottom: 195px;
+  }
+  .language,
+  .hobby {
+    margin-bottom: 148.23px;
   }
 
   /* PHAN CHUNG CHI - GIAI THUONG  */
